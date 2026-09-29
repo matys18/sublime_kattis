@@ -321,7 +321,7 @@ class KattisClient:
 
         if not response.status_code == 200:
             raise KattisClientException(
-                "Could not submit to Kattis. Status code: " + str(res.status_code))
+                "Could not submit to Kattis. Status code: " + str(response.status_code))
 
         return KattisSubmissionResult.create_from_response(response, self.config)
 
